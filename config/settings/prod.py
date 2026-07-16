@@ -1,8 +1,16 @@
 from .base import *
 
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['.railway.app'])
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '.railway.app').split(',')
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(default=env('DATABASE_URL'))
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ['DB_NAME'],
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASSWORD'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ.get('DB_PORT', '5432'),
+    }
+}

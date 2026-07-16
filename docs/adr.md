@@ -44,3 +44,13 @@
 - **Decisión:** Custom User model heredando de AbstractUser, email como identificador secundario
 - **Consecuencias:** +flexibilidad para agregar campos, migración inicial requerida
 - **Estado:** Vigente
+
+## ADR-005: PostgreSQL como base de datos
+
+- **Fecha:** 2026-07-16
+- **Tipo:** Técnica
+- **Ciclo:** Cycle 0
+- **Contexto:** El sistema necesita una base de datos relacional robusta para el registro de ventas, compras y gastos
+- **Decisión:** PostgreSQL con psycopg 3. Configuración por entorno via variables de entorno
+- **Consecuencias:** +confiabilidad, +escalabilidad, requiere PostgreSQL instalado en desarrollo
+- **Estado:** Vigente
