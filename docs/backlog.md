@@ -5,8 +5,8 @@
 ## Alta
 
 ### FEATURE
-- [ ] CRUD de Categorías
-- [ ] CRUD de Artículos
+- [x] CRUD de Categorías
+- [x] CRUD de Artículos
 - [ ] Registro de Ventas (caja diaria)
 - [ ] Registro de Gastos del día
 

@@ -1,8 +1,8 @@
 from .base import *
 
 SECRET_KEY = os.environ['SECRET_KEY']
-DEBUG = False
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '.railway.app').split(',')
+DEBUG = True
+ALLOWED_HOSTS = os.environ.get('*').split(',')
 
 DATABASES = {
     'default': {
