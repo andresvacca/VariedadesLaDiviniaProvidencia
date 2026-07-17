@@ -68,3 +68,6 @@ mysql_history
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# --- EXTERNO ---
+docs/
